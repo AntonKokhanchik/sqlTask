@@ -14,7 +14,7 @@ create table students
     name varchar(15) not null,
     surname varchar(15) not null,
     course tinyint(1) not null,
-    gener enum('male','female') not null,
+    gender enum('male','female') not null,
     city_id smallint not null,
     primary key(student_id),
     foreign key(city_id) references cities(city_id)
