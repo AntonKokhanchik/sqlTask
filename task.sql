@@ -19,3 +19,13 @@ create table students
     primary key(student_id),
     foreign key(city_id) references cities(city_id)
 );
+
+
+insert into cities (city_name, city_country) values
+    ('Erfurt', 'Germany'),
+    ('San-Francisco', 'USA'),
+    ('Capetown', 'South Africa'),
+    ('Beijing(Pekin)', 'China'),
+    ('Essen', 'Germany'),
+    ('Hamburg', 'Germany'),
+    ('Atlanta', 'USA');
