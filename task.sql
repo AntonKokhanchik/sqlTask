@@ -48,3 +48,15 @@ select course from students where gender='female';
 #3)забавно получилось, так и оставлю
 select count(students.name), cities.city_country
 from students, cities where students.city_id=cities.city_id and city_country='Germany';
+#4)
+select count(name) from students where course<'4';
+#5)
+update students set course='3' where name='Anna';
+update students set course='2' where name='Peter';
+#6)
+delete from students where gender='female' and city_id in
+    (select city_id from cities where city_country='Germany');
+#7)
+alter table students add column course_done enum('yes', 'no') not null default 'no';
+update students set course_done='yes' where course='4' and city_id in
+    (select city_id from cities where city_country='Germany');
