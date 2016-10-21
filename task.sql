@@ -40,3 +40,11 @@ insert into students (name, surname, course, gender, city_id) values
     ('Hanz', 'Mueller', '4', 'male', '6'),
     ('Alisa', 'Kepler', '4', 'female', '1'),
     ('Anna', 'Madavie', '2', 'female', '7');
+
+#1)
+select max(student_id) from students;
+#2)в конце пишет сколько строк выбрано
+select course from students where gender='female';
+#3)забавно получилось, так и оставлю
+select count(students.name), cities.city_country
+from students, cities where students.city_id=cities.city_id and city_country='Germany';
